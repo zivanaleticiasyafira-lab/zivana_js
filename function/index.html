@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>function</title>
+</head>
+<body>
+  <button type="button" onclick="sayhello()">click</button>
+  <form>
+    <label>Fahrenheit</label><br>
+    <input type="number" id="f" placeholder="Enter the temperature">
+    <button type="button" onclick="toCelcius()">Konversi</button>
+    <label>celcius</label>
+    <h1 id="suhuKonversi"></h1>
+  </form>
+
+  <script>
+    function sayhello(){
+      return alert("Hello World");
+    }
+    function toCelcius(){
+      let f = document.getElementById("f").value;
+      if(f == "") return alert("Isi dulu suhunya!");
+      let c = (f - 32) * 5 / 9;
+      document.getElementById("suhuKonversi").innerText = c.toFixed(2) + " °C";
+    }
+  </script>
+</body>
+</html>
